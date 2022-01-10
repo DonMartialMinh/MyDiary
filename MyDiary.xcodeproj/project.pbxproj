@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1D09B63F1A12431AE8C02D /* Pods_MyDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E166727A3AB267F2E437A29 /* Pods_MyDiary.framework */; };
 		836EC9C3278BE0CF00585F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EC9C2278BE0CF00585F33 /* AppDelegate.swift */; };
 		836EC9C5278BE0CF00585F33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EC9C4278BE0CF00585F33 /* SceneDelegate.swift */; };
 		836EC9C7278BE0CF00585F33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EC9C6278BE0CF00585F33 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00A008004955947077EBDBB8 /* Pods-MyDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDiary.debug.xcconfig"; path = "Target Support Files/Pods-MyDiary/Pods-MyDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		836EC9BF278BE0CF00585F33 /* MyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836EC9C2278BE0CF00585F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836EC9C4278BE0CF00585F33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		836EC9CB278BE0D300585F33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		836EC9CE278BE0D300585F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836EC9D0278BE0D300585F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B50F4F40B20B72B0F8F3C89 /* Pods-MyDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDiary.release.xcconfig"; path = "Target Support Files/Pods-MyDiary/Pods-MyDiary.release.xcconfig"; sourceTree = "<group>"; };
+		9E166727A3AB267F2E437A29 /* Pods_MyDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1D09B63F1A12431AE8C02D /* Pods_MyDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F38B9150B355988F573AEC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00A008004955947077EBDBB8 /* Pods-MyDiary.debug.xcconfig */,
+				9B50F4F40B20B72B0F8F3C89 /* Pods-MyDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		836EC9B6278BE0CF00585F33 = {
 			isa = PBXGroup;
 			children = (
 				836EC9C1278BE0CF00585F33 /* MyDiary */,
 				836EC9C0278BE0CF00585F33 /* Products */,
+				1F38B9150B355988F573AEC0 /* Pods */,
+				E96C67D4CF0ABBDF6626AE17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +74,37 @@
 			children = (
 				836EC9C2278BE0CF00585F33 /* AppDelegate.swift */,
 				836EC9C4278BE0CF00585F33 /* SceneDelegate.swift */,
-				836EC9C6278BE0CF00585F33 /* ViewController.swift */,
-				836EC9C8278BE0CF00585F33 /* Main.storyboard */,
+				836EC9D7278BE0F600585F33 /* Models */,
+				836EC9D6278BE0EE00585F33 /* Views */,
 				836EC9CB278BE0D300585F33 /* Assets.xcassets */,
 				836EC9CD278BE0D300585F33 /* LaunchScreen.storyboard */,
 				836EC9D0278BE0D300585F33 /* Info.plist */,
 			);
 			path = MyDiary;
+			sourceTree = "<group>";
+		};
+		836EC9D6278BE0EE00585F33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9C6278BE0CF00585F33 /* ViewController.swift */,
+				836EC9C8278BE0CF00585F33 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		836EC9D7278BE0F600585F33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E96C67D4CF0ABBDF6626AE17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E166727A3AB267F2E437A29 /* Pods_MyDiary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 836EC9D3278BE0D300585F33 /* Build configuration list for PBXNativeTarget "MyDiary" */;
 			buildPhases = (
+				20814B3F31F42B94F2A1C85A /* [CP] Check Pods Manifest.lock */,
 				836EC9BB278BE0CF00585F33 /* Sources */,
 				836EC9BC278BE0CF00585F33 /* Frameworks */,
 				836EC9BD278BE0CF00585F33 /* Resources */,
+				8D7AD5A0AB4D1EBA8953AC5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +174,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20814B3F31F42B94F2A1C85A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D7AD5A0AB4D1EBA8953AC5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyDiary/Pods-MyDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyDiary/Pods-MyDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyDiary/Pods-MyDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		836EC9BB278BE0CF00585F33 /* Sources */ = {
@@ -284,6 +368,7 @@
 		};
 		836EC9D4278BE0D300585F33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A008004955947077EBDBB8 /* Pods-MyDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +380,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +398,7 @@
 		};
 		836EC9D5278BE0D300585F33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B50F4F40B20B72B0F8F3C89 /* Pods-MyDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +410,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
