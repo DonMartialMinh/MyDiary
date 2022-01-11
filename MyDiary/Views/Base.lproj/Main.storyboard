@@ -15,10 +15,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaW-g8-hYG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="Pvw-0v-c1q">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Pvw-0v-c1q" firstAttribute="leading" secondItem="KaW-g8-hYG" secondAttribute="leading" id="3YY-Km-2jH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pvw-0v-c1q" secondAttribute="bottom" id="3rx-pC-KYF"/>
+                                    <constraint firstItem="Pvw-0v-c1q" firstAttribute="top" secondItem="KaW-g8-hYG" secondAttribute="top" id="X4x-mK-ZZa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pvw-0v-c1q" secondAttribute="trailing" id="aaf-kM-4vA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3t-Gz-E0z">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="aKS-Zq-gQf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="dateClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="L5v-u6-tB9"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aKS-Zq-gQf" secondAttribute="bottom" id="DZV-UR-zZK"/>
+                                    <constraint firstAttribute="trailing" secondItem="aKS-Zq-gQf" secondAttribute="trailing" id="UHu-ij-xGS"/>
+                                    <constraint firstItem="aKS-Zq-gQf" firstAttribute="top" secondItem="T3t-Gz-E0z" secondAttribute="top" id="XVa-0S-KSw"/>
+                                    <constraint firstItem="aKS-Zq-gQf" firstAttribute="leading" secondItem="T3t-Gz-E0z" secondAttribute="leading" id="Yqf-y5-dK8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="T3t-Gz-E0z" secondAttribute="bottom" id="6kU-hW-etc"/>
+                            <constraint firstItem="KaW-g8-hYG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BP9-aZ-UuQ"/>
+                            <constraint firstItem="KaW-g8-hYG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hoz-Yv-dum"/>
+                            <constraint firstItem="T3t-Gz-E0z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mf1-Em-NIs"/>
+                            <constraint firstItem="KaW-g8-hYG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Ppg-kQ-ilZ"/>
+                            <constraint firstItem="T3t-Gz-E0z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VDS-JR-bur"/>
+                            <constraint firstItem="KaW-g8-hYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WlW-ES-Q5u"/>
+                            <constraint firstItem="T3t-Gz-E0z" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="YcS-Ae-1AE"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hWh-2c-cJk"/>
+                    <navigationItem key="navigationItem" id="hWh-2c-cJk">
+                        <leftBarButtonItems>
+                            <barButtonItem id="Bze-ba-8UO"/>
+                            <barButtonItem id="MpW-uO-hDh"/>
+                        </leftBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImage" destination="Pvw-0v-c1q" id="gd1-Tr-q8K"/>
+                        <outlet property="picker" destination="aKS-Zq-gQf" id="6nr-No-pYM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,6 +93,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hpt-yt-RJL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -44,6 +109,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="House" width="6000" height="4000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
