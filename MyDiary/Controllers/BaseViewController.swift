@@ -34,7 +34,9 @@ class BaseViewController: UIViewController {
 
     // MARK: - ButtonClicked
     @objc func leftButtonClicked(_ sender: UIBarButtonItem) {
-        print("123")
+        let vc = SettingViewController.initFromNib()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     @objc func searchButtonClicked(_ sender: UIBarButtonItem) {
