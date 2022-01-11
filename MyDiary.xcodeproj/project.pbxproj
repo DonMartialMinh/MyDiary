@@ -14,6 +14,7 @@
 		836EC9CA278BE0CF00585F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836EC9C8278BE0CF00585F33 /* Main.storyboard */; };
 		836EC9CC278BE0D300585F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836EC9CB278BE0D300585F33 /* Assets.xcassets */; };
 		836EC9CF278BE0D300585F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836EC9CD278BE0D300585F33 /* LaunchScreen.storyboard */; };
+		836EC9DA278C2D1100585F33 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EC9D9278C2D1100585F33 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		836EC9CB278BE0D300585F33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		836EC9CE278BE0D300585F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836EC9D0278BE0D300585F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836EC9D9278C2D1100585F33 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9B50F4F40B20B72B0F8F3C89 /* Pods-MyDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDiary.release.xcconfig"; path = "Target Support Files/Pods-MyDiary/Pods-MyDiary.release.xcconfig"; sourceTree = "<group>"; };
 		9E166727A3AB267F2E437A29 /* Pods_MyDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 				836EC9C4278BE0CF00585F33 /* SceneDelegate.swift */,
 				836EC9D7278BE0F600585F33 /* Models */,
 				836EC9D6278BE0EE00585F33 /* Views */,
+				836EC9D8278C2BFD00585F33 /* Controllers */,
 				836EC9CB278BE0D300585F33 /* Assets.xcassets */,
 				836EC9CD278BE0D300585F33 /* LaunchScreen.storyboard */,
 				836EC9D0278BE0D300585F33 /* Info.plist */,
@@ -97,6 +100,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		836EC9D8278C2BFD00585F33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9D9278C2D1100585F33 /* BaseViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E96C67D4CF0ABBDF6626AE17 /* Frameworks */ = {
@@ -223,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				836EC9C7278BE0CF00585F33 /* ViewController.swift in Sources */,
+				836EC9DA278C2D1100585F33 /* BaseViewController.swift in Sources */,
 				836EC9C3278BE0CF00585F33 /* AppDelegate.swift in Sources */,
 				836EC9C5278BE0CF00585F33 /* SceneDelegate.swift in Sources */,
 			);
