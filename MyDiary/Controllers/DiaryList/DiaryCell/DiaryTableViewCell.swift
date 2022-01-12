@@ -9,6 +9,19 @@ import UIKit
 
 class DiaryTableViewCell: UITableViewCell {
     static let identifier = "DiaryCell"
+    var data: Diary? {
+        didSet {
+            dayLabel.text = "\(data!.date.get(.day))"
+            weekDayLabel.text = data!.date.getWeekDay()
+            contentLabel.text = data!.content
+            if data!.image == nil {
+                backgroundContentImage.isHidden = true
+                contentImage.isHidden = true
+            } else {
+                contentImage.image = data!.image
+            }
+        }
+    }
 
     // MARK: - IBOutlet
     @IBOutlet weak var dayLabel: UILabel!
@@ -24,17 +37,5 @@ class DiaryTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-
-    func configure(with data: Diary) {
-        dayLabel.text = "\(data.date.get(.day))"
-        weekDayLabel.text = data.date.getWeekDay()
-        contentLabel.text = data.content
-        if data.image == nil {
-            backgroundContentImage.isHidden = true
-            contentImage.isHidden = true
-        } else {
-            contentImage.image = data.image
-        }
     }
 }

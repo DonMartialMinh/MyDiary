@@ -34,4 +34,11 @@ extension Date {
             return "WRONG INPUT"
         }
     }
+
+    func toString() -> String{
+        let day = self.get(.day)
+        let month = self.get(.month)
+        let year = self.get(.year)
+        return "\(day).\(month).\(year)"
+    }
 }

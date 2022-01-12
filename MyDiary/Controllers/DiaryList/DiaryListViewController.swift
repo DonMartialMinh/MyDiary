@@ -83,7 +83,7 @@ extension DiaryListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.identifier, for: indexPath) as? DiaryTableViewCell else {
             return UITableViewCell()
         }
-        cell.configure(with: diary)
+        cell.data = diary
         return cell
     }
 
@@ -96,6 +96,10 @@ extension DiaryListViewController: UITableViewDataSource {
 extension DiaryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let vc = DiaryDetailViewController.initFromNib()
+        vc.data = sections[indexPath.section].diaryList[indexPath.row]
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
