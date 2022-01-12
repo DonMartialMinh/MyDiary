@@ -15,21 +15,30 @@ class BaseViewController: UIViewController {
         setUpNavigationController()
     }
 
-    private func setUpNavigationController() {
+    // MARK: - Setup
+    func setUpNavigationController() {
         navigationItem.title = "My Diary";
         //create bar button item
         let gearImage = UIImage(systemName: "gearshape.fill")
-        let gearButton = UIBarButtonItem(image: gearImage, style: .plain, target: self, action: #selector(leftButtonClicked(_:)))
-        navigationItem.leftBarButtonItem = gearButton
+        let gearButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        gearButton.setImage(gearImage, for: .normal)
+        gearButton.addTarget(self, action: #selector(leftButtonClicked(_:)), for: .touchUpInside)
+        let gearBarButton = UIBarButtonItem(customView: gearButton)
+        navigationItem.leftBarButtonItem = gearBarButton
         
         let searchImage = UIImage(systemName: "magnifyingglass")
-        let searchButton = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(searchButtonClicked(_:)))
+        let searchButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        searchButton.setImage(searchImage, for: .normal)
+        searchButton.addTarget(self, action: #selector(searchButtonClicked(_:)), for: .touchUpInside)
+        let searchbarButton = UIBarButtonItem(customView: searchButton)
         
+        let diaryListButtonImage = UIImage(systemName: "list.dash.header.rectangle")
+        let diaryListButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        diaryListButton.setImage(diaryListButtonImage, for: .normal)
+        diaryListButton.addTarget(self, action: #selector(diaryListButtonClicked(_:)), for: .touchUpInside)
+        let diaryListbarButton = UIBarButtonItem(customView: diaryListButton)
         
-        let rightButtonImage = UIImage(systemName: "list.dash.header.rectangle")
-        let rightButton = UIBarButtonItem(image: rightButtonImage, style: .plain, target: self, action: #selector(rightButtonClicked(_:)))
-        
-        navigationItem.rightBarButtonItems = [rightButton, searchButton]
+        navigationItem.rightBarButtonItems = [diaryListbarButton, searchbarButton]
     }
 
     // MARK: - ButtonClicked
@@ -43,7 +52,8 @@ class BaseViewController: UIViewController {
         print("123")
     }
     
-    @objc func rightButtonClicked(_ sender: UIBarButtonItem) {
-        print("123")
+    @objc func diaryListButtonClicked(_ sender: UIBarButtonItem) {
+        let vc = DiaryListViewController.initFromNib()
+        navigationController?.pushViewController(vc, animated: false)
     }
 }

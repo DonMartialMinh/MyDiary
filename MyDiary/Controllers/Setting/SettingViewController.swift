@@ -128,14 +128,14 @@ extension SettingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 35
+    }
 }
 
 // MARK: - UITableViewDatasource
 extension SettingViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 35
-    }
-
     func numberOfSections(in tableView: UITableView) -> Int {
         sectionList.count
     }
