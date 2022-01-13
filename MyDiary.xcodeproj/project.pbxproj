@@ -27,6 +27,7 @@
 		83CC44F0278EB760003D9DE1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC44EF278EB760003D9DE1 /* DateExtension.swift */; };
 		83CC44F6278F2922003D9DE1 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC44F4278F2922003D9DE1 /* DiaryDetailViewController.swift */; };
 		83CC44F7278F2922003D9DE1 /* DiaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CC44F5278F2922003D9DE1 /* DiaryDetailViewController.xib */; };
+		83CC44F9278FC3EC003D9DE1 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC44F8278FC3EC003D9DE1 /* UITableViewCellExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		83CC44EF278EB760003D9DE1 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		83CC44F4278F2922003D9DE1 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		83CC44F5278F2922003D9DE1 /* DiaryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryDetailViewController.xib; sourceTree = "<group>"; };
+		83CC44F8278FC3EC003D9DE1 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		9B50F4F40B20B72B0F8F3C89 /* Pods-MyDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDiary.release.xcconfig"; path = "Target Support Files/Pods-MyDiary/Pods-MyDiary.release.xcconfig"; sourceTree = "<group>"; };
 		9E166727A3AB267F2E437A29 /* Pods_MyDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 			children = (
 				836EC9E1278D6AFD00585F33 /* UIViewControllerExtension.swift */,
 				83CC44EF278EB760003D9DE1 /* DateExtension.swift */,
+				83CC44F8278FC3EC003D9DE1 /* UITableViewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				836EC9DE278D679B00585F33 /* SettingViewController.swift in Sources */,
 				83CC44F6278F2922003D9DE1 /* DiaryDetailViewController.swift in Sources */,
 				83CC44ED278E811B003D9DE1 /* DiaryTableViewCell.swift in Sources */,
+				83CC44F9278FC3EC003D9DE1 /* UITableViewCellExtension.swift in Sources */,
 				836EC9C7278BE0CF00585F33 /* ViewController.swift in Sources */,
 				836EC9E4278D766300585F33 /* SettingTableViewCell.swift in Sources */,
 				836EC9E2278D6AFD00585F33 /* UIViewControllerExtension.swift in Sources */,

@@ -17,8 +17,25 @@ class DiaryDetailViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        content.text = data?.content
-        bar.topItem?.title = data?.date.toString()
+        configure()
+    }
+
+    private func configure() {
+        guard let data = data else { return }
+        bar.topItem?.title = data.date.toString()
+        let font = UIFont.systemFont(ofSize: 18.0)
+        let attributedString = NSMutableAttributedString(string: data.content, attributes: [NSAttributedString.Key.font: font])
+        if let image = data.image {
+            let attachment = NSTextAttachment()
+            attachment.image = image
+            let oldWidth = attachment.image!.size.width;
+            let scaleFactor = oldWidth / (content.frame.size.width);
+            attachment.image = UIImage(cgImage: attachment.image!.cgImage!, scale: scaleFactor, orientation: .up)
+            let imageString = NSAttributedString(attachment: attachment)
+            attributedString.insert(imageString, at: 5)
+        }
+        content.attributedText = attributedString
+        content.font = font
     }
 
     // MARK: - Button click

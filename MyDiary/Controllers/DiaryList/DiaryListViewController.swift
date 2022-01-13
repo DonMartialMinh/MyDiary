@@ -30,7 +30,7 @@ class DiaryListViewController: BaseViewController {
         configure()
         table.delegate = self
         table.dataSource = self
-        table.register(UINib(nibName: "DiaryTableViewCell", bundle: nil), forCellReuseIdentifier: DiaryTableViewCell.identifier)
+        table.register(DiaryTableViewCell.initFromNib(), forCellReuseIdentifier: DiaryTableViewCell.identifier)
     }
 
     // MARK: - Override
@@ -57,8 +57,8 @@ class DiaryListViewController: BaseViewController {
                 Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một ", image: nil)
             ]),
             DiarySection(title: "2021.12", diaryList: [
-                Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một ", image: UIImage(systemName: "gearshape.fill")),
-                Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một ", image: UIImage(systemName: "gearshape.fill"))
+                Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một ", image: UIImage(named: "Me")),
+                Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một ", image: UIImage(named: "Bgay"))
             ]),
         ]
     }
