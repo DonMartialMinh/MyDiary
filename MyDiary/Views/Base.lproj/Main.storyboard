@@ -19,12 +19,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaW-g8-hYG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="Pvw-0v-c1q">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pvw-0v-c1q">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                        <color key="tintColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="Pvw-0v-c1q" firstAttribute="leading" secondItem="KaW-g8-hYG" secondAttribute="leading" id="3YY-Km-2jH"/>
                                     <constraint firstAttribute="bottom" secondItem="Pvw-0v-c1q" secondAttribute="bottom" id="3rx-pC-KYF"/>
@@ -70,12 +71,7 @@
                             <constraint firstItem="T3t-Gz-E0z" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="YcS-Ae-1AE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hWh-2c-cJk">
-                        <leftBarButtonItems>
-                            <barButtonItem id="Bze-ba-8UO"/>
-                            <barButtonItem id="MpW-uO-hDh"/>
-                        </leftBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="hWh-2c-cJk"/>
                     <connections>
                         <outlet property="backgroundImage" destination="Pvw-0v-c1q" id="gd1-Tr-q8K"/>
                         <outlet property="picker" destination="aKS-Zq-gQf" id="6nr-No-pYM"/>
@@ -93,6 +89,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hpt-yt-RJL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,7 +106,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="House" width="6000" height="4000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
