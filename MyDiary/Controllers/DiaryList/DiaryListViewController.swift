@@ -57,8 +57,8 @@ class DiaryListViewController: BaseViewController {
                 Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một ", image: nil)
             ]),
             DiarySection(title: "2021.12", diaryList: [
-                Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một ", image: UIImage(named: "Me")),
-                Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một ", image: UIImage(named: "Bgay"))
+                Diary(date: Date(), content: "Mộ", image: UIImage(named: "Me")),
+                Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một nMột Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một", image: UIImage(named: "Bgay"))
             ]),
         ]
     }

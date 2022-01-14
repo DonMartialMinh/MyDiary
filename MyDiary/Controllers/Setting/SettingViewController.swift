@@ -34,16 +34,18 @@ class SettingViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var navBar: UINavigationBar!
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        navBar.update(backgroundColor: UIColor.white, titleColor: UIColor.black)
+        navBar.topItem?.title = "Setting"
         configure()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.identifier)
         tableView.register(SwitchSettingTableViewCell.self, forCellReuseIdentifier: SwitchSettingTableViewCell.identifier)
-        title = "Setting"
     }
 
     // MARK: - Button Click handle

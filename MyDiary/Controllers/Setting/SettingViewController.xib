@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="MyDiary" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="iHM-Lk-QPc" id="CBV-G6-ggb"/>
+                <outlet property="navBar" destination="KXj-ms-2Wm" id="06D-K2-wbh"/>
                 <outlet property="tableView" destination="KQr-Xb-2Zj" id="M8S-MB-P3q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,7 +23,10 @@
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXj-ms-2Wm">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="Setting" id="5ZN-KP-UTn">
                             <barButtonItem key="leftBarButtonItem" image="multiply" catalog="system" id="iHM-Lk-QPc">

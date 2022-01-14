@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiaryDetailViewController" customModule="MyDiary" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditDiaryDetailViewController" customModule="MyDiary" customModuleProvider="target">
             <connections>
-                <outlet property="bar" destination="nzn-eQ-wl7" id="4O3-L5-YW7"/>
-                <outlet property="content" destination="Ej3-zc-xdf" id="inv-9R-F7O"/>
+                <outlet property="content" destination="uX1-ds-AN6" id="SSR-ge-C2N"/>
+                <outlet property="navBar" destination="Zds-JR-Pnj" id="sI3-Vk-bzs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,29 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzn-eQ-wl7">
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-JR-Pnj">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="barTintColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Title" id="G9e-BV-pof">
-                            <barButtonItem key="leftBarButtonItem" image="chevron.down" catalog="system" id="Ap2-MK-cCW">
+                        <navigationItem title="Title" id="AP6-um-Re3">
+                            <barButtonItem key="leftBarButtonItem" image="multiply" catalog="system" id="bZV-EO-zIq">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="cancelBarButton:" destination="-1" id="uFi-Qk-Ya8"/>
+                                    <action selector="cancelButtonClicked:" destination="-1" id="WX4-0Y-WI7"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" image="pencil" catalog="system" id="4DI-ir-ACa">
+                            <barButtonItem key="rightBarButtonItem" image="camera" catalog="system" id="4EI-xd-zcU">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="editBarButton:" destination="-1" id="WRW-SY-Okt"/>
+                                    <action selector="cameraButtonClicked:" destination="-1" id="Uly-Eg-0jE"/>
                                 </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej3-zc-xdf">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uX1-ds-AN6">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <attributedString key="attributedText">
@@ -54,26 +55,26 @@
                             </attributes>
                         </fragment>
                     </attributedString>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="Ej3-zc-xdf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1D1-K4-46P"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nzn-eQ-wl7" secondAttribute="trailing" id="1lO-Bo-4MX"/>
-                <constraint firstItem="Ej3-zc-xdf" firstAttribute="top" secondItem="nzn-eQ-wl7" secondAttribute="bottom" id="7fF-Ow-Tcn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ej3-zc-xdf" secondAttribute="bottom" id="8Yt-WP-ZJM"/>
-                <constraint firstItem="nzn-eQ-wl7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IVn-mf-kc7"/>
-                <constraint firstItem="nzn-eQ-wl7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WJE-gQ-TdF"/>
-                <constraint firstItem="Ej3-zc-xdf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sNY-dc-y9d"/>
+                <constraint firstItem="Zds-JR-Pnj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1sc-JI-4mV"/>
+                <constraint firstItem="uX1-ds-AN6" firstAttribute="top" secondItem="Zds-JR-Pnj" secondAttribute="bottom" id="OXF-6x-29G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uX1-ds-AN6" secondAttribute="trailing" id="Vbg-qi-q3f"/>
+                <constraint firstItem="uX1-ds-AN6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WeF-Zu-3d7"/>
+                <constraint firstItem="Zds-JR-Pnj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YLM-8Y-fyf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uX1-ds-AN6" secondAttribute="bottom" id="asn-zd-nuD"/>
+                <constraint firstItem="Zds-JR-Pnj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ngz-lb-nc1"/>
             </constraints>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="132" y="92"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="multiply" catalog="system" width="128" height="111"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

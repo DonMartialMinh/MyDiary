@@ -32,7 +32,7 @@ class DiaryDetailViewController: UIViewController {
             let scaleFactor = oldWidth / (content.frame.size.width);
             attachment.image = UIImage(cgImage: attachment.image!.cgImage!, scale: scaleFactor, orientation: .up)
             let imageString = NSAttributedString(attachment: attachment)
-            attributedString.insert(imageString, at: 5)
+            attributedString.insert(imageString, at: attributedString.length)
         }
         content.attributedText = attributedString
         content.font = font
@@ -44,5 +44,9 @@ class DiaryDetailViewController: UIViewController {
     }
 
     @IBAction func editBarButton(_ sender: Any) {
+        let vc = EditDiaryDetailViewController.initFromNib()
+        vc.data = data
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
     }
 }
