@@ -14,12 +14,13 @@ class DiaryDetailViewController: UIViewController {
     @IBOutlet weak var bar: UINavigationBar!
     @IBOutlet weak var content: UITextView!
 
-    // MARK: - View LifeCycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
 
+    // MARK: - Private
     private func configure() {
         guard let data = data else { return }
         bar.topItem?.title = data.date.toString()

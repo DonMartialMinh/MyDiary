@@ -110,53 +110,30 @@
 		836EC9C1278BE0CF00585F33 /* MyDiary */ = {
 			isa = PBXGroup;
 			children = (
-				836EC9C2278BE0CF00585F33 /* AppDelegate.swift */,
-				836EC9C4278BE0CF00585F33 /* SceneDelegate.swift */,
-				836EC9D7278BE0F600585F33 /* Models */,
-				836EC9D6278BE0EE00585F33 /* Views */,
-				836EC9D8278C2BFD00585F33 /* Controllers */,
-				836EC9E0278D6ADE00585F33 /* Extensions */,
-				836EC9CB278BE0D300585F33 /* Assets.xcassets */,
-				836EC9CD278BE0D300585F33 /* LaunchScreen.storyboard */,
-				836EC9D0278BE0D300585F33 /* Info.plist */,
+				83BFF38E27927E6F00197564 /* Application */,
+				83BFF38F279280D700197564 /* Presentation */,
+				83BFF3912792813600197564 /* Domain */,
+				83BFF3922792814F00197564 /* Data */,
+				83BFF3932792819D00197564 /* Resources */,
 			);
 			path = MyDiary;
 			sourceTree = "<group>";
 		};
-		836EC9D6278BE0EE00585F33 /* Views */ = {
+		836EC9D6278BE0EE00585F33 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				836EC9C6278BE0CF00585F33 /* ViewController.swift */,
-				836EC9C8278BE0CF00585F33 /* Main.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		836EC9D7278BE0F600585F33 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		836EC9D8278C2BFD00585F33 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				83AB131F2791780600C8939F /* EditDiaryDetail */,
-				83CC44F3278F28FF003D9DE1 /* DiaryDetail */,
-				83CC44E6278E6E04003D9DE1 /* DiaryList */,
-				836EC9DB278D677500585F33 /* Setting */,
+				83E0F2F527951B3100ED9712 /* ViewModel */,
+				83E0F2F427951B1A00ED9712 /* View */,
 				836EC9D9278C2D1100585F33 /* BaseViewController.swift */,
 			);
-			path = Controllers;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		836EC9DB278D677500585F33 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				83CC44F2278ED9AA003D9DE1 /* SettingCell */,
-				836EC9DC278D679B00585F33 /* SettingViewController.swift */,
-				836EC9DD278D679B00585F33 /* SettingViewController.xib */,
+				83E0F2FD27951BD500ED9712 /* ViewModel */,
+				83E0F2FC27951BCB00ED9712 /* View */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -177,48 +154,183 @@
 		83AB131F2791780600C8939F /* EditDiaryDetail */ = {
 			isa = PBXGroup;
 			children = (
-				83AB13202791782A00C8939F /* EditDiaryDetailViewController.swift */,
-				83AB13212791782A00C8939F /* EditDiaryDetailViewController.xib */,
+				83E0F2F627951B4500ED9712 /* ViewModel */,
+				83E0F2F727951B5600ED9712 /* View */,
 			);
 			path = EditDiaryDetail;
+			sourceTree = "<group>";
+		};
+		83BFF38E27927E6F00197564 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9C2278BE0CF00585F33 /* AppDelegate.swift */,
+				836EC9C4278BE0CF00585F33 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		83BFF38F279280D700197564 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9D6278BE0EE00585F33 /* Home */,
+				83AB131F2791780600C8939F /* EditDiaryDetail */,
+				83CC44F3278F28FF003D9DE1 /* DiaryDetail */,
+				83CC44E6278E6E04003D9DE1 /* DiaryList */,
+				836EC9DB278D677500585F33 /* Setting */,
+				83BFF3902792810100197564 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		83BFF3902792810100197564 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9E0278D6ADE00585F33 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		83BFF3912792813600197564 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		83BFF3922792814F00197564 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		83BFF3932792819D00197564 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9CB278BE0D300585F33 /* Assets.xcassets */,
+				836EC9D0278BE0D300585F33 /* Info.plist */,
+				836EC9CD278BE0D300585F33 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		83CC44E6278E6E04003D9DE1 /* DiaryList */ = {
 			isa = PBXGroup;
 			children = (
-				83CC44F1278ED990003D9DE1 /* DiaryCell */,
-				83CC44E7278E6E26003D9DE1 /* DiaryListViewController.swift */,
-				83CC44E8278E6E26003D9DE1 /* DiaryListViewController.xib */,
+				83E0F2FB27951BBC00ED9712 /* ViewModel */,
+				83E0F2FA27951B9400ED9712 /* View */,
 			);
 			path = DiaryList;
 			sourceTree = "<group>";
 		};
-		83CC44F1278ED990003D9DE1 /* DiaryCell */ = {
+		83CC44F1278ED990003D9DE1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				83CC44EB278E811B003D9DE1 /* DiaryTableViewCell.swift */,
 				83CC44EC278E811B003D9DE1 /* DiaryTableViewCell.xib */,
 			);
-			path = DiaryCell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		83CC44F2278ED9AA003D9DE1 /* SettingCell */ = {
+		83CC44F2278ED9AA003D9DE1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				836EC9E5278DDB6400585F33 /* SwitchSettingTableViewCell.swift */,
 				836EC9E3278D766300585F33 /* SettingTableViewCell.swift */,
 			);
-			path = SettingCell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		83CC44F3278F28FF003D9DE1 /* DiaryDetail */ = {
 			isa = PBXGroup;
 			children = (
-				83CC44F4278F2922003D9DE1 /* DiaryDetailViewController.swift */,
-				83CC44F5278F2922003D9DE1 /* DiaryDetailViewController.xib */,
+				83E0F2F927951B8500ED9712 /* ViewModel */,
+				83E0F2F827951B7700ED9712 /* View */,
 			);
 			name = DiaryDetail;
 			path = "DỉayDetail";
+			sourceTree = "<group>";
+		};
+		83E0F2F427951B1A00ED9712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9C6278BE0CF00585F33 /* ViewController.swift */,
+				836EC9C8278BE0CF00585F33 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83E0F2F527951B3100ED9712 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83E0F2F627951B4500ED9712 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83E0F2F727951B5600ED9712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83AB13202791782A00C8939F /* EditDiaryDetailViewController.swift */,
+				83AB13212791782A00C8939F /* EditDiaryDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83E0F2F827951B7700ED9712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83CC44F4278F2922003D9DE1 /* DiaryDetailViewController.swift */,
+				83CC44F5278F2922003D9DE1 /* DiaryDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83E0F2F927951B8500ED9712 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83E0F2FA27951B9400ED9712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83CC44F1278ED990003D9DE1 /* Cells */,
+				83CC44E7278E6E26003D9DE1 /* DiaryListViewController.swift */,
+				83CC44E8278E6E26003D9DE1 /* DiaryListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83E0F2FB27951BBC00ED9712 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83E0F2FC27951BCB00ED9712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				836EC9DC278D679B00585F33 /* SettingViewController.swift */,
+				836EC9DD278D679B00585F33 /* SettingViewController.xib */,
+				83CC44F2278ED9AA003D9DE1 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83E0F2FD27951BD500ED9712 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E96C67D4CF0ABBDF6626AE17 /* Frameworks */ = {
@@ -517,7 +629,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5J7A25VTZK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDiary/Info.plist;
+				INFOPLIST_FILE = MyDiary/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -547,7 +659,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5J7A25VTZK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDiary/Info.plist;
+				INFOPLIST_FILE = MyDiary/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

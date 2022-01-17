@@ -8,9 +8,12 @@
 import UIKit
 
 class ViewController: BaseViewController {
-    
+
+    // MARK: - IBOutlet
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var picker: UIDatePicker!
+
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgoundTapped = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped(_:)))
@@ -18,10 +21,12 @@ class ViewController: BaseViewController {
         backgroundImage.addGestureRecognizer(backgoundTapped)
         // Do any additional setup after loading the view.
     }
-    
+
+    // MARK: - ButtonClick
     @IBAction func dateClicked(_ sender: UIDatePicker) {
         print(sender.date)
     }
+
     @objc func backgroundTapped(_ sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "", message: "Cover photo", preferredStyle: .actionSheet)
 

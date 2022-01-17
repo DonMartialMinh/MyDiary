@@ -24,7 +24,7 @@ class DiaryListViewController: BaseViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var table: UITableView!
 
-    // MARK: - View LifeCycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -50,8 +50,8 @@ class DiaryListViewController: BaseViewController {
         navigationController?.popViewController(animated: false)
     }
 
-    // MARK: - Configure section
-    func configure() {
+    // MARK: - Private
+    private func configure() {
         sections = [
             DiarySection(title: "2022.01", diaryList: [
                 Diary(date: Date(), content: "Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một Một ", image: nil)
