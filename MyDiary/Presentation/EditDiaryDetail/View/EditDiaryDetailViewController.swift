@@ -14,7 +14,7 @@ class EditDiaryDetailViewController: UIViewController {
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var navBar: UINavigationBar!
 
-    // MARK: - View LifeCycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
@@ -22,6 +22,7 @@ class EditDiaryDetailViewController: UIViewController {
         configure()
     }
 
+    // MARK: - Keyboard Observer
     @objc func keyboardWillShow(notification:NSNotification) {
         guard let userInfo = notification.userInfo else { return }
         var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
@@ -37,6 +38,7 @@ class EditDiaryDetailViewController: UIViewController {
         content.contentInset = contentInset
     }
 
+    // MARK: - Private
     private func configure() {
         guard let data = data else { return }
         navBar.topItem?.title = data.date.toString()

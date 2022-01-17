@@ -36,7 +36,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navBar: UINavigationBar!
     
-    // MARK: - View Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.update(backgroundColor: UIColor.white, titleColor: UIColor.black)
@@ -48,13 +48,13 @@ class SettingViewController: UIViewController {
         tableView.register(SwitchSettingTableViewCell.self, forCellReuseIdentifier: SwitchSettingTableViewCell.identifier)
     }
 
-    // MARK: - Button Click handle
+    // MARK: - ButtonClick
     @IBAction func backButtonClicked(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
 
-    // MARK: - Configure item
-    func configure() {
+    // MARK: - Private
+    private func configure() {
         sectionList = [
             Section(title: "", option: [
                 .defaultCell(option: SettingOption(title: "Account", handler: {
