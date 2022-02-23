@@ -11,7 +11,7 @@ struct DiarySection {
     let title: String
     let diaryList: [Diary]
 }
-
+aaaa
 struct Diary {
     let date: Date
     let content: String
