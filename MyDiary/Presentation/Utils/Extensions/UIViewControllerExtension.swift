@@ -12,7 +12,7 @@ extension UIViewController {
         autoreleasepool {
             return String(describing: Self.self)
         }
-    }
+    }xxxxx
 
     static func initFromNib() -> Self {
         return Self(nibName: classId, bundle: nil)
